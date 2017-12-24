@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <title>RSS Demo</title>
+    <link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-langs.min.js"></script>
+    <script type="text/javascript" src="js/FeedEk.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#divRss').FeedEk({
+                FeedUrl: 'https://www.blackhatworld.com/forums/making-money.12/index.rss',
+                MaxCount: 10,
+                ShowDesc: false,
+				ShowPubDate: false
+            });
+
+            $('#divRss2').FeedEk({
+                FeedUrl: 'https://www.blackhatworld.com/forums/blackhat-lounge.25/index.rss',
+                MaxCount: 10,
+                ShowDesc: false,
+				ShowPubDate: false
+				
+            });
+
+            $('#divRss3').FeedEk({
+                FeedUrl: 'http://feeds.feedburner.com/DrudgeReportFeed',
+                MaxCount: 8,
+                ShowDesc: false,
+				ShowPubDate: false
+            });
+
+            $('#divRss4').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'L',
+                DateFormatLang: 'en'
+            });
+
+            $('#divRss5').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'L',
+                DateFormatLang: 'tr'
+            });
+
+            $('#divRss6').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'L',
+                DateFormatLang: 'en-gb'
+            });
+
+            $('#divRss7').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'LL',
+                DateFormatLang: 'en'
+            });
+
+            $('#divRss8').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'LLL',
+                DateFormatLang: 'en'
+            });
+
+            $('#divRss9').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'll',
+                DateFormatLang: 'en'
+            });
+            $('#divRss10').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'lll',
+                DateFormatLang: 'en'
+            });
+
+            $('#divRss11').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'DD MMMM YYYY',
+                DateFormatLang: 'en'
+            });
+            $('#divRss12').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'MM/DD/YYYY'
+            });
+
+            $('#divRss13').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'MM/DD/YYYY HH:mm'
+            });
+
+            $('#divRss14').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'MM-DD-YYYY'
+            });
+
+            $('#divRss15').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+                MaxCount: 2,
+                DateFormat: 'MM-DD-YYYY HH:mm'
+            });
+        });
+
+    </script>
+    <style>
+        body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 13px;line-height: 12px !important;}
+        .rssDiv{float: left;}
+        ul{width: 400px !important;}
+    </style>
+</head>
+<body>
+  <div style="padding:7px;">
+    <div>
+        <div class="rssDiv">
+            <p><strong>BHW</strong><p />
+            <div id="divRss"></div>
+        </div>
+<br>
+        <div class="rssDiv">
+            <p><strong>BHW/Lounge</strong><p />
+            <div id="divRss2"></div>
+        </div>
+<br>
+        <div class="rssDiv">
+            <p><strong>Drudge</strong><p />
+            <div id="divRss3"></div>
+        </div>
+		
+		</div>    
+
+  </div>
+</body>
+</html>
