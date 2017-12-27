@@ -101,6 +101,19 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 </script>
+<script type="text/javascript">
+function example_1(moon){
+	var day = new Date().getDate()
+	var dayWeek=moon.phase[day].dayWeek
+	var html="<div class='moon'>"
+	html+="<div>"+moon.nameDay[dayWeek]+"</div>"
+	html+="<div>"+ day + " " + moon.monthName + " "+moon.year+"</div>"
+	html+=moon.phase[day].svg
+	html+="<div>"+moon.phase[day].phaseName + " "+ Math.round(moon.phase[day].lighting)+"%</div>"
+	html+="</div>"
+	document.getElementById("ex1").innerHTML=html
+}
+</script>
 <!--/Moon Phase-->
 </div>
 
