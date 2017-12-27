@@ -65,56 +65,7 @@
 <br>
 <!-- Yandex.Metrika informer --> <a href="https://metrica.yandex.com/list/?search=&type=all&sortField=visits&sortDirection=desc" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/41859439/3_1_FFFFFFFF_E2E2E2FF_0_visits" style="width:88px; height:31px; border:0;" alt="Yandex.Metrica" title="Yandex.Metrica: data for today (page views, visits and unique users)" /></a> <!-- /Yandex.Metrika informer -->
 <!--Moon Phase-->
-<div id="ex1"></div>
-<script type="text/javascript">		
-function load_moon_phases(obj){
-	var gets=[]
-	for (var i in obj){
-		gets.push(i+"="+encodeURIComponent(obj[i]))
-	}	
-	var xmlhttp = new XMLHttpRequest()
-	var url = "http://www.icalendar37.net/lunar/api/?"+gets.join("&")
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			var moon  = JSON.parse(xmlhttp.responseText)
-			example_1(moon)
-			example_2(moon)
-			example_3(moon)	
-		}
-	}
-	xmlhttp.open("GET", url, true)
-	xmlhttp.send()
-}
-document.addEventListener("DOMContentLoaded", function() { 
-	var configMoon = {
-		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
-		month 		:new Date().getMonth() + 1, // 1  - 12
-		year  		:new Date().getFullYear(),
-		size		:150, //pixels
-		lightColor	:"#FFFF88", //CSS color
-		shadeColor	:"#111111", //CSS color
-		sizeQuarter	:120, //pixels
-		texturize	:false //true - false
-	}
-	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
-	load_moon_phases(configMoon)
-})
-
-</script>
-<script type="text/javascript">
-function example_1(moon){
-	var day = new Date().getDate()
-	var dayWeek=moon.phase[day].dayWeek
-	var html="<div class='moon'>"
-	html+="<div>"+moon.nameDay[dayWeek]+"</div>"
-	html+="<div>"+ day + " " + moon.monthName + " "+moon.year+"</div>"
-	html+=moon.phase[day].svg
-	html+="<div>"+moon.phase[day].phaseName + " "+ Math.round(moon.phase[day].lighting)+"%</div>"
-	html+="</div>"
-	document.getElementById("ex1").innerHTML=html
-}
-</script>
-
+<div id="contain_moon"><div><!--©wdisseny--></div><div></div></div><script type="text/javascript">(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="http://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=80&lightColor=rgb(255,255,255)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[0].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script>
 <!--/Moon Phase-->
 </div>
 
