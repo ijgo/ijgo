@@ -65,12 +65,8 @@
 <br>
 <!-- Yandex.Metrika informer --> <a href="https://metrica.yandex.com/list/?search=&type=all&sortField=visits&sortDirection=desc" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/41859439/3_1_FFFFFFFF_E2E2E2FF_0_visits" style="width:88px; height:31px; border:0;" alt="Yandex.Metrica" title="Yandex.Metrica: data for today (page views, visits and unique users)" /></a> <!-- /Yandex.Metrika informer -->
 <!--Moon Phase-->
-
 <div id="ex1"></div>
-<div id="ex2"></div>
-<div id="ex3"></div>
 <script type="text/javascript">		
-	
 function load_moon_phases(obj){
 	var gets=[]
 	for (var i in obj){
@@ -94,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
 		month 		:new Date().getMonth() + 1, // 1  - 12
 		year  		:new Date().getFullYear(),
-		size		:50, //pixels
+		size		:150, //pixels
 		lightColor	:"#FFFF88", //CSS color
 		shadeColor	:"#111111", //CSS color
-		sizeQuarter	:20, //pixels
+		sizeQuarter	:120, //pixels
 		texturize	:false //true - false
 	}
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
@@ -118,7 +114,6 @@ function example_1(moon){
 	document.getElementById("ex1").innerHTML=html
 }
 </script>
-
 
 <!--/Moon Phase-->
 </div>
