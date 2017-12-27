@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HOME</title>
+<title>Startpage</title>
 <link rel="stylesheet" href="css/stylesheet.css">
 
 </head>
 <body>
 <div class="datagrid">
 <div id="right_col">
+
 <!--Row-->
 <a href="http://www.voat.co"><img src="images/voat.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="http://youtube.com/yourownidea"><img src="images/YouTube.png" width="65" height="65" border="0" class="rotate"></a>
@@ -40,6 +41,7 @@
 <br>
 <a href="https://www.serplab.co.uk/user/dashboard.php"><img src="images/serplab.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="https://2captcha.com/auth/login"><img src="images/2captcha.jpg" width="65" height="65" border="0" class="rotate"></a>
+<a href="https://metrica.yandex.com"><img src="images/metrica.png" alt="Yandex Metrica"  height="65" width="65" border="0" class="rotate" /></a>
 
 <br><br>
 <!--CPA Networks-->
@@ -63,66 +65,14 @@
 <a href="http://www.loadedcash.com/index.php?c=members&a=index"><img src="images/loadedcash.png" alt="Loaded Cash"  height="60" width="135" border="0" class="rotate" /></a>
 <a href="https://ringpartner.invoca.net/ppclogin"><img src="images/ringpartner.png" alt="Loaded Cash"  height="60" width="135" border="0" class="rotate" /></a>
 <br>
-<!-- Yandex.Metrika informer --> <a href="https://metrica.yandex.com/list/?search=&type=all&sortField=visits&sortDirection=desc" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/41859439/3_1_FFFFFFFF_E2E2E2FF_0_visits" style="width:88px; height:31px; border:0;" alt="Yandex.Metrica" title="Yandex.Metrica: data for today (page views, visits and unique users)" /></a> <!-- /Yandex.Metrika informer -->
-<!--Moon Phase-->
-
-<div id="ex1"></div>
-<div id="ex2"></div>
-<div id="ex3"></div>
-<script type="text/javascript">		
-	
-function load_moon_phases(obj){
-	var gets=[]
-	for (var i in obj){
-		gets.push(i+"="+encodeURIComponent(obj[i]))
-	}	
-	var xmlhttp = new XMLHttpRequest()
-	var url = "http://www.icalendar37.net/lunar/api/?"+gets.join("&")
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			var moon  = JSON.parse(xmlhttp.responseText)
-			example_1(moon)
-			example_2(moon)
-			example_3(moon)	
-		}
-	}
-	xmlhttp.open("GET", url, true)
-	xmlhttp.send()
-}
-document.addEventListener("DOMContentLoaded", function() { 
-	var configMoon = {
-		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
-		month 		:new Date().getMonth() + 1, // 1  - 12
-		year  		:new Date().getFullYear(),
-		size		:50, //pixels
-		lightColor	:"#FFFF88", //CSS color
-		shadeColor	:"#111111", //CSS color
-		sizeQuarter	:20, //pixels
-		texturize	:false //true - false
-	}
-	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
-	load_moon_phases(configMoon)
-})
-
-</script>
-<script type="text/javascript">
-function example_1(moon){
-	var day = new Date().getDate()
-	var dayWeek=moon.phase[day].dayWeek
-	var html="<div class='moon'>"
-	html+="<div>"+moon.nameDay[dayWeek]+"</div>"
-	html+="<div>"+ day + " " + moon.monthName + " "+moon.year+"</div>"
-	html+=moon.phase[day].svg
-	html+="<div>"+moon.phase[day].phaseName + " "+ Math.round(moon.phase[day].lighting)+"%</div>"
-	html+="</div>"
-	document.getElementById("ex1").innerHTML=html
-}
-</script>
+<a href="https://poloniex.com">Poloniex</a> | 
+<a href="https://bittrex.com">Bittrex</a> | 
+<a href="https://coinbase.com">Coinbase</a> | 
+<a href="https://coinmarketcap.com">CoinMarketCap</a>
+<br>
 
 
-<!--/Moon Phase-->
 </div>
-
 <div id="left_col">
 <iframe src="rss_feed.html" frameborder="0" height="900px" width="500px"></iframe>
 </div>
