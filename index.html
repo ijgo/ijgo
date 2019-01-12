@@ -3,12 +3,12 @@
 <head>
 <title>Startpage</title>
 <link rel="stylesheet" href="css/stylesheet.css">
-
 </head>
 <body>
 <div class="datagrid">
-<div id="left_col">
 <!-- © wdisseny --><div id="contain_moon" style="text-align:center;padding-bottom:5px;"><div style="font-weight:bold"></div><div style=""></div><div>.</div><div style="font-size:small">.</div></div><script type="text/javascript">(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="http://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(255,255,255)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML=b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+<div id="left_col">
+
 <a href="http://www.voat.co"><img src="images/voat.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="http://www.reddit.com"><img src="images/reddit.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="http://youtube.com/yourownidea"><img src="images/YouTube.png" width="65" height="65" border="0" class="rotate"></a>
