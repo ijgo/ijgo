@@ -11,12 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body onload="startTime()">
-
-<!-- Clock and search -->
 <div class="section no-pad-bot">
     <div class="container">
-      <br><br>
-	 
+<!--Clock-->
 <script>
 window.onload = function() {
   clock();  
@@ -45,14 +42,16 @@ window.onload = function() {
 </script>
 <h1 id="currentTime"></h1>
 
+<!--Search-->
       <div class="row center">
+	  <!--
         <form method="get" id="search" action="http://duckduckgo.com/">
         <input type="hidden" name="k8" value="#444444"/>
 <input type="hidden" name="k9" value="#D51920"/>
 <input type="hidden" name="kt" value="h"/>
           <input class="search-input" type="text" name="q" maxlength="255" placeholder="Search DuckDuckGo" autofocus/>
           <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
-        </form>
+        </form>-->
       </div>  
     </div>
   </div>
@@ -126,9 +125,19 @@ window.onload = function() {
             </div>
           </div>
         </div>
-
+		
+		<!-- Link container 3 -->
+        <div class="col s10 m4">
+          <div class="card white hoverable">
+            <div class="card-content blue-grey darken-3"><span class="white-text"></span></div>
+            <div class="card-content">
+<script src='https://darksky.net/map-embed/@radar,29.644,-81.190,11.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar'></script>
+            </div>
+          </div>
         </div>
 
+        </div>
+<div><center><script type='text/javascript' src='https://darksky.net/widget/graph-bar/29.52509170324804,-81.23633971679686/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script></center></div>
   </div>
   </div>
   </div>
