@@ -60,43 +60,7 @@
 <a href="https://coinmarketcap.com">CoinMarketCap</a>
 <br>
 <div id="right_col">
-
-<script type="text/javascript">		
-	
-function load_moon_phases(obj){
-	var gets=[]
-	for (var i in obj){
-		gets.push(i+"="+encodeURIComponent(obj[i]))
-	}	
-	var xmlhttp = new XMLHttpRequest()
-	var url = "http://www.icalendar37.net/lunar/api/?"+gets.join("&")
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			var moon  = JSON.parse(xmlhttp.responseText)
-			example_1(moon)
-			example_2(moon)
-			example_3(moon)	
-		}
-	}
-	xmlhttp.open("GET", url, true)
-	xmlhttp.send()
-}
-document.addEventListener("DOMContentLoaded", function() { 
-	var configMoon = {
-		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
-		month 		:new Date().getMonth() + 1, // 1  - 12
-		year  		:new Date().getFullYear(),
-		size		:50, //pixels
-		lightColor	:"#FFFF88", //CSS color
-		shadeColor	:"#111111", //CSS color
-		sizeQuarter	:20, //pixels
-		texturize	:false //true - false
-	}
-	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
-	load_moon_phases(configMoon)
-})
-
-</script>
+<!-- © wdisseny --><div id="contain_moon" style="text-align:center;padding-bottom:5px;"><div style="font-weight:bold"></div><div style=""></div><div>.</div><div style="font-size:small">.</div></div><script type="text/javascript">(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="http://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(255,255,255)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML=b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
 <!--<iframe src="rss_feed.html" frameborder="0" height="900px" width="500px"></iframe>-->
 </div>
 
