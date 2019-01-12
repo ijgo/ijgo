@@ -1,0 +1,96 @@
+html {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+}
+body {
+    top: 0%;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+ input, input[type=text] {
+    padding: 12px;
+    color: #222;
+    background-color: #f3f3f3 !important;
+    border: 1px #333 !important;
+    width: 50% !important;
+}  
+.search-input {
+    padding: 12px;
+    border-radius: 2px;
+    font-size: 1.1rem;
+}
+input::-webkit-input-placeholder {
+    color: #444 !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    color: #444 !important;  
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #444 !important;  
+}
+input:-ms-input-placeholder {  
+    color: #444 !important;  
+}
+input[type=text]:focus:not([readonly]) {
+   -moz-box-shadow:    inset 0 0 2px #000;
+   -webkit-box-shadow: inset 0 0 2px #000;
+   box-shadow:         inset 0 0 2px #000;
+}
+.shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+.card .card-content {
+    padding: 13px;
+    border-radius: 0 0 2px 2px;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* LOCAL FONT HOSTING */
+.material-icons {
+    vertical-align: middle;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* This is the standard icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for webkit browsers */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and chrome */
+    text-rendering: optimizeLegibility;
+    /* Support for IE versions 10-11 */
+    font-feature-settings: 'liga';
+    /* Support for Firefox */
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/material-design-icons/MaterialIcons-Regular.ttf") format('truetype'), url("../fonts/material-design-icons/MaterialIcons-Regular.eot#iefix") format('embedded-opentype'), url("../fonts/material-design-icons/MaterialIcons-Regular.woff2") format('woff2'), url("../fonts/material-design-icons/MaterialIcons-Regular.woff") format('woff'), url("../fonts/material-design-icons/MaterialIcons-Regular.svg") format('svg');
+}
+
+#currentTime {
+  font-size: 10em;
+  text-align: center;
+  font-weight: 300;
+  font-family: MaterialIcons-Regular;
+  color: #191919;
+  margin: 10px auto;
+}

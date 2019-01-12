@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html>
+<meta charset="UTF-8">
 <head>
-<title>Startpage</title>
-<link rel="stylesheet" href="css/stylesheet.css">
+    <title>Start Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/bg.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
-<div class="datagrid">
-<div id="left_col">
+<body onload="startTime()">
+
+<!-- Clock and search -->
+<div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+	 
+<script>
+window.onload = function() {
+  clock();  
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }    
+    if(hour==0){ 
+      hour=12;
+    }
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }     
+  document.getElementById('currentTime').innerHTML = hour+':'+min + mid ;
+    setTimeout(clock, 1000);
+    }
+}
+</script>
+<h1 id="currentTime"></h1>
+
+      <div class="row center">
+        <form method="get" id="search" action="http://duckduckgo.com/">
+        <input type="hidden" name="k8" value="#444444"/>
+<input type="hidden" name="k9" value="#D51920"/>
+<input type="hidden" name="kt" value="h"/>
+          <input class="search-input" type="text" name="q" maxlength="255" placeholder="Search DuckDuckGo" autofocus/>
+          <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
+        </form>
+      </div>  
+    </div>
+  </div>
+
+<!-- Section for link containers -->
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <!-- Link container 1 -->
+        <div class="col s12 m4">
+          <div class="card white hoverable">
+            <div class="card-content blue-grey darken-3"><span class="white-text">Link Category</span></div>
+            <div class="card-content">
 <a href="http://www.voat.co"><img src="images/voat.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="http://www.reddit.com"><img src="images/reddit.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="http://youtube.com/yourownidea"><img src="images/YouTube.png" width="65" height="65" border="0" class="rotate"></a>
@@ -29,8 +89,19 @@
 <a href="https://adwords.google.com/KeywordPlanner"><img src="images/keywordtool.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="https://www.google.com/analytics/"><img src="images/analytics.png" width="65" height="65" border="0" class="rotate"></a>
 <a href="https://metrica.yandex.com"><img src="images/metrica.png" alt="Yandex Metrica"  height="65" width="65" border="0" class="rotate" /></a>
+<a href="https://poloniex.com">Poloniex</a> | 
+<a href="https://bittrex.com">Bittrex</a> | 
+<a href="https://coinbase.com">Coinbase</a> | 
+<a href="https://coinmarketcap.com">CoinMarketCap</a>
+            </div>
+          </div>
+        </div>
 
-<br><br>
+        <!-- Link container 2 -->
+        <div class="col s12 m4">
+          <div class="card white hoverable">
+            <div class="card-content blue-grey darken-3"><span class="white-text">Link Category</span></div>
+            <div class="card-content">
 <!--CPA Networks-->
 <a href="http://partner.cpaprosperity.com/affiliates/"><img src="images/cpaprosperity-big.jpg" alt="Cpa Prosperity"  height="60" width="135" border="0" class="rotate" /></a> 
 <a href="http://bigbucksrevenue.com/affiliates/login.php#login/"><img src="images/bigbucksrevenue.png" alt="BigBucksRevenue"  height="60" width="135" border="0" class="rotate" /></a>
@@ -52,19 +123,14 @@
 <a href="http://www.loadedcash.com/index.php?c=members&a=index"><img src="images/loadedcash.png" alt="Loaded Cash"  height="60" width="135" border="0" class="rotate" /></a>
 <a href="https://ringpartner.invoca.net/ppclogin"><img src="images/ringpartner.png" alt="Loaded Cash"  height="60" width="135" border="0" class="rotate" /></a>
 <br>
-<a href="https://poloniex.com">Poloniex</a> | 
-<a href="https://bittrex.com">Bittrex</a> | 
-<a href="https://coinbase.com">Coinbase</a> | 
-<a href="https://coinmarketcap.com">CoinMarketCap</a>
-<br>
-<div id="right_col">
-<!--<iframe src="rss_feed.html" frameborder="0" height="900px" width="500px"></iframe>-->
-</div>
+            </div>
+          </div>
+        </div>
 
-<div id="quote">
-<script language="JavaScript" src="quotation-generator.js" type="text/javascript"></script>
-</div>
-</div>
-</div>
+        </div>
+
+  </div>
+  </div>
+  </div>
 </body>
 </html>
