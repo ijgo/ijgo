@@ -263,3 +263,9 @@ a:visited{
 	color:#e2e2e2;
 	text-decoration:none;
 }
+
+#quotebox {
+  font-size: 14px;
+  line-height: 1.2em;
+  width: 60%;
+}
